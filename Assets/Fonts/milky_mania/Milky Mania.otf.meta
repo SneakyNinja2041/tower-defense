@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bd83a3e55153f204ca0b30476412ea3a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Milky Mania
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 68d7f016ba9ef3343bfe4b19fae738fa, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
