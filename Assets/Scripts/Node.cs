@@ -110,7 +110,7 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (isUpgraded == true)
+        if (isUpgraded == true && !isFinal)
         {
             PlayerStats.Money -= turretBlueprint.finalCost;
 
