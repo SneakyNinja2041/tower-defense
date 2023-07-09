@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
     {
         PlayerStats.Money += value;
 
+        WaveSpawner.enemies.Remove(this.gameObject);
         Destroy(gameObject);
     }
 
@@ -72,6 +73,7 @@ public class Enemy : MonoBehaviour
     {
 
         PlayerStats.Lives--;
+        WaveSpawner.enemies.Remove(this.gameObject);
         Destroy(gameObject);
     }
 
