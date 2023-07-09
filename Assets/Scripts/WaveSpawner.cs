@@ -5,7 +5,12 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject enemyPrefabRed;
+    public GameObject enemyPrefabGreen;
+    public GameObject enemyPrefabBlue;
+
+    private GameObject enemyToSpawn;
+    private int randomTemp;
 
     public Transform spawnPoint;
 
@@ -47,7 +52,26 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        // Randomly generates which slime colour to spawn
+        randomTemp = Random.Range(1, 11);
+        if (randomTemp <= 6)
+        {
+            enemyToSpawn = enemyPrefabRed;
+        }
+        else if (randomTemp <= 9)
+        {
+            enemyToSpawn = enemyPrefabGreen;
+        }
+        else if (randomTemp == 10)
+        {
+            enemyToSpawn = enemyPrefabBlue;
+        }
+        else
+        {
+            enemyToSpawn = enemyPrefabRed; // Prevent potential null error
+        }
+        
+        enemy = Instantiate(enemyToSpawn, spawnPoint.position, spawnPoint.rotation);
         enemies.Add(enemy);
     }
 

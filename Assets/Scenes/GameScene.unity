@@ -4242,7 +4242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2901a810d29d52e448df478be5ae180b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5385373265345354144, guid: 4fa5dd0722eafbb4ab1addad0593c388, type: 3}
+  enemyPrefabRed: {fileID: 5385373265345354144, guid: 4fa5dd0722eafbb4ab1addad0593c388, type: 3}
+  enemyPrefabGreen: {fileID: 5331317627942852439, guid: 8a33af667ee593b48bde289eb34409f0, type: 3}
+  enemyPrefabBlue: {fileID: 2582552158600223897, guid: a06a00f1883b28147b3d290d6e95be2f, type: 3}
   spawnPoint: {fileID: 1734589386}
 --- !u!4 &475376511
 Transform:
