@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 10
+  damage: 25
 --- !u!96 &-6089301890122001944
 TrailRenderer:
   serializedVersion: 2

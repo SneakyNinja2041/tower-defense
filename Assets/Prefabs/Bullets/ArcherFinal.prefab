@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 437723942344394468}
   - component: {fileID: -6089301890122001944}
   m_Layer: 0
-  m_Name: WizardUP
+  m_Name: ArcherFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.2747864, g: 0.5525462, b: 0.6132076, a: 1}
+  m_Color: {r: 1, g: 0.7897872, b: 0.4292453, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db35dcf6db56454b920398079777f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  damage: 7
+  speed: 20
+  damage: 3
 --- !u!96 &-6089301890122001944
 TrailRenderer:
   serializedVersion: 2
@@ -150,8 +150,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.018520355
-        value: 0.088756144
+        time: 0
+        value: 0.15385014
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -159,7 +159,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.43914795
+        time: 0.44973755
         value: 0
         inSlope: 0
         outSlope: 0
@@ -172,7 +172,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.3987629, g: 0.94450164, b: 0.9716981, a: 1}
+      key0: {r: 0.972549, g: 0.92346704, b: 0.40000004, a: 1}
       key1: {r: 0.23529413, g: 0.23529413, b: 0.23529413, a: 0}
       key2: {r: 0.25004417, g: 0.25004417, b: 0.25004417, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

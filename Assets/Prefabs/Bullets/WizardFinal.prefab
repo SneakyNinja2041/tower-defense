@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 437723942344394468}
   - component: {fileID: -6089301890122001944}
   m_Layer: 0
-  m_Name: WizardUP
+  m_Name: WizardFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 7
+  damage: 10
 --- !u!96 &-6089301890122001944
 TrailRenderer:
   serializedVersion: 2

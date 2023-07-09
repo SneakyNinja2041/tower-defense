@@ -20,7 +20,9 @@ public class Node : MonoBehaviour
     public TurretBlueprint turretBlueprint;
     [HideInInspector]
     public bool isUpgraded = false;
+    public bool isFinal = false;
 
+  
 
     BuildManager buildManager;
 
@@ -94,8 +96,36 @@ public class Node : MonoBehaviour
 
         isUpgraded = true;
 
+
         Debug.Log("Turret Upgraded");
 
+    }
+
+    public void FinalTurret()
+    {
+
+        if (PlayerStats.Money < turretBlueprint.finalCost)
+        {
+            Debug.Log("Not enough money for Upgrade");
+            return;
+        }
+
+        if (isUpgraded == true)
+        {
+            PlayerStats.Money -= turretBlueprint.finalCost;
+
+            // get rid of old turret for upgraded turret
+            Destroy(turret);
+
+            // building new upgraded turret
+            GameObject _turret = (GameObject)Instantiate(turretBlueprint.finalPrefab, GetBuildPosition(), Quaternion.identity);
+            turret = _turret;
+
+            isFinal = true;
+
+            Debug.Log("Turret Upgraded");
+        }
+       
     }
 
     public void SellTurret()
@@ -105,6 +135,7 @@ public class Node : MonoBehaviour
         Destroy(turret);
         turretBlueprint = null;
         isUpgraded = false;
+        isFinal = false;
     }
     
     void OnMouseEnter()

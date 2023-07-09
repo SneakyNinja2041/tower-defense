@@ -11,9 +11,18 @@ public class NodeUI : MonoBehaviour
 
     private Node target;
 
+    //public TurretBlueprint turretBlueprint;
+
+    public GameObject upgradeButtonUI;
+    public GameObject finalButtonUI;
+
     public TextMeshProUGUI sellAmount;
     public TextMeshProUGUI upgradeCost;
+    public TextMeshProUGUI finalCost;
     public Button upgradeButton;
+
+    //public TextMeshProUGUI dmgText;
+    //public TextMeshProUGUI speedText;
 
     public void SetTarget (Node _target)
     {
@@ -24,11 +33,27 @@ public class NodeUI : MonoBehaviour
         if (!target.isUpgraded)
         {
             upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
+            //dmgText.text = "DMG: " + turretBlueprint.damage;
+            //speedText.text = "ATK SPD: " + turretBlueprint.atkSpeed;
+            upgradeButtonUI.SetActive(true);
+            finalButtonUI.SetActive(false);
             upgradeButton.interactable = true;
         }
-        else
+
+        if (!target.isFinal && target.isUpgraded)
+        {
+            finalCost.text = "$" + target.turretBlueprint.finalCost;
+            //dmgText.text = "DMG: " + turretBlueprint.upgradedDamage;
+            //speedText.text = "ATK SPD: " + turretBlueprint.upgradedAtkSpeed;
+            upgradeButtonUI.SetActive(false);
+            finalButtonUI.SetActive(true);
+        }
+        
+        if (target.isFinal)
         {
             upgradeCost.text = "DONE!";
+            //dmgText.text = "DMG: " + turretBlueprint.finalDamage;
+            //speedText.text = "ATK SPD: " + turretBlueprint.finalAtkSpeed;
             upgradeButton.interactable = false;
         }
 
@@ -36,6 +61,7 @@ public class NodeUI : MonoBehaviour
 
         ui.SetActive(true);
     }
+
 
     public void Hide()
     {
@@ -45,6 +71,12 @@ public class NodeUI : MonoBehaviour
     public void Upgrade()
     {
         target.UpgradeTurret();
+        BuildManager.instance.DeselectNode();
+    }
+
+    public void FinalUpgrade()
+    {
+        target.FinalTurret();
         BuildManager.instance.DeselectNode();
     }
 

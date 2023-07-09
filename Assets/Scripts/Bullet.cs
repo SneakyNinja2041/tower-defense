@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         if (target == null)
         {
             // find the next closest target
-            // Destroy(gameObject);
+            Destroy(gameObject);
             return;
         }
 
