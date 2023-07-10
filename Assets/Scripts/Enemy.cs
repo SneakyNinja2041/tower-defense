@@ -15,6 +15,14 @@ public class Enemy : MonoBehaviour
     public int health = 10;
     public int value = 10;
 
+    public string colour;
+
+    public GameObject enemyPrefabRed;
+    public GameObject enemyPrefabGreen;
+    public GameObject enemyPrefabBlue;
+
+    private GameObject enemy;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -37,8 +45,29 @@ public class Enemy : MonoBehaviour
     {
         PlayerStats.Money += value;
 
-        WaveSpawner.enemies.Remove(this.gameObject);
-        Destroy(gameObject);
+        if (colour == "Red")
+        {
+            WaveSpawner.enemies.Remove(this.gameObject);
+            Destroy(gameObject);
+        }
+        else if (colour == "Green")
+        {
+            enemy = Instantiate(enemyPrefabRed, waypoints[waypointIndex].transform.position, this.transform.rotation);
+            WaveSpawner.enemies.Remove(this.gameObject);
+            WaveSpawner.enemies.Add(enemy);
+            enemy.GetComponent<Enemy>().colour = "Red";
+            enemy.GetComponent<Enemy>().waypointIndex = waypointIndex;
+            Destroy(gameObject);
+        }
+        else if (colour == "Blue")
+        {
+            enemy = Instantiate(enemyPrefabGreen, waypoints[waypointIndex].transform.position, this.transform.rotation);
+            WaveSpawner.enemies.Remove(this.gameObject);
+            WaveSpawner.enemies.Add(enemy);
+            enemy.GetComponent<Enemy>().colour = "Green";
+            enemy.GetComponent<Enemy>().waypointIndex = waypointIndex;
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

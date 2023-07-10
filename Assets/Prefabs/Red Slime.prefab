@@ -140,3 +140,7 @@ MonoBehaviour:
   moveSpeed: 3
   health: 20
   value: 10
+  colour: 
+  enemyPrefabRed: {fileID: 5385373265345354144}
+  enemyPrefabGreen: {fileID: 5331317627942852439, guid: 8a33af667ee593b48bde289eb34409f0, type: 3}
+  enemyPrefabBlue: {fileID: 2582552158600223897, guid: a06a00f1883b28147b3d290d6e95be2f, type: 3}

@@ -8,6 +8,7 @@ public class WaveSpawner : MonoBehaviour
     public GameObject enemyPrefabRed;
     public GameObject enemyPrefabGreen;
     public GameObject enemyPrefabBlue;
+    private string colour;
 
     private GameObject enemyToSpawn;
     private int randomTemp;
@@ -57,14 +58,17 @@ public class WaveSpawner : MonoBehaviour
         if (randomTemp <= 6)
         {
             enemyToSpawn = enemyPrefabRed;
+            colour = "Red";
         }
         else if (randomTemp <= 9)
         {
             enemyToSpawn = enemyPrefabGreen;
+            colour = "Green";
         }
         else if (randomTemp == 10)
         {
             enemyToSpawn = enemyPrefabBlue;
+            colour = "Blue";
         }
         else
         {
@@ -73,6 +77,7 @@ public class WaveSpawner : MonoBehaviour
         
         enemy = Instantiate(enemyToSpawn, spawnPoint.position, spawnPoint.rotation);
         enemies.Add(enemy);
+        enemy.GetComponent<Enemy>().colour = colour;
     }
 
 }
