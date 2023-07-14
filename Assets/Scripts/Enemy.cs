@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
 
     private int waypointIndex = 0;
 
+    private Animator animator;
+
     public int health = 10;
     public int value = 10;
 
@@ -28,17 +30,21 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         transform.position = waypoints[waypointIndex].transform.position;
+
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage (int amount)
     {
+        
         health -= amount;
+        animator.SetTrigger("Hurt");
         if (health <= 0)
         {
 
             Die();
         }
-
+        
     }
 
     void Die()
@@ -47,8 +53,9 @@ public class Enemy : MonoBehaviour
 
         if (colour == "Red")
         {
+            animator.SetTrigger("Dead");
             WaveSpawner.enemies.Remove(this.gameObject);
-            Destroy(gameObject);
+            Destroy(gameObject, 1f);
         }
         else if (colour == "Green")
         {
