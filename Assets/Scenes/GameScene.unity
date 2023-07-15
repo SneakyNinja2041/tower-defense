@@ -4803,40 +4803,49 @@ MonoBehaviour:
     cost: 10
     damage: 5
     atkSpeed: 2
+    range: 4
     upgradedPrefab: {fileID: 8296478823916959069, guid: a0a7c05db136acb44a037a09130c7114, type: 3}
     upgradeCost: 10
     upgradedDamage: 7
     upgradedAtkSpeed: 4
+    upgradedRange: 4
     finalPrefab: {fileID: 5149553479520085424, guid: edff84e6c456526419c7fa8d80783b57, type: 3}
     finalCost: 10
     finalDamage: 10
     finalAtkSpeed: 5
+    finalRange: 5
   archerTurret:
     prefab: {fileID: 2817703532161865650, guid: 2e825e2de42da0e428fe648c90c216e2, type: 3}
     cost: 20
     damage: 2
     atkSpeed: 2
+    range: 5
     upgradedPrefab: {fileID: 6991173252116550623, guid: 326056246013cfd4884eaedd5986ef1d, type: 3}
     upgradeCost: 10
     upgradedDamage: 2
     upgradedAtkSpeed: 2
+    upgradedRange: 6
     finalPrefab: {fileID: 5236046216917440333, guid: 6ef3e80ca2cd30a42bf9461a5af14f51, type: 3}
     finalCost: 10
     finalDamage: 3
     finalAtkSpeed: 3
+    finalRange: 7
   swordTurret:
     prefab: {fileID: 6011727200544132969, guid: 92c4c0d85a4e5a3479702fd0e0dca3b5, type: 3}
     cost: 50
     damage: 10
     atkSpeed: 1
+    range: 3
     upgradedPrefab: {fileID: 8740622221482188629, guid: dd1b6f431eb5aa049a28242182d82478, type: 3}
     upgradeCost: 10
     upgradedDamage: 15
     upgradedAtkSpeed: 1
+    upgradedRange: 3
     finalPrefab: {fileID: 2377859233924022913, guid: a5085eff2d99093428190813e54c7858, type: 3}
     finalCost: 10
     finalDamage: 20
     finalAtkSpeed: 1
+    finalRange: 4
 --- !u!4 &519368629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5154535050555416918, guid: f416dbfd7e8e4d04f8dd2de95c977d07, type: 3}
@@ -5073,8 +5082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4899964, y: -11}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.000072479, y: -3.5793}
+  m_SizeDelta: {x: 35.214, y: 10.962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525607364
 MonoBehaviour:
@@ -5159,7 +5168,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 80.97557, y: 10.325078, z: 83.88576, w: 25.015097}
+  m_margin: {x: 0.3510337, y: 0.17084312, z: 0.011899947, w: 0.23878384}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5845,12 +5854,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1246260544}
+  turretBlueprint:
+    prefab: {fileID: 0}
+    cost: 0
+    damage: 0
+    atkSpeed: 0
+    range: 0
+    upgradedPrefab: {fileID: 0}
+    upgradeCost: 0
+    upgradedDamage: 0
+    upgradedAtkSpeed: 0
+    upgradedRange: 0
+    finalPrefab: {fileID: 0}
+    finalCost: 0
+    finalDamage: 0
+    finalAtkSpeed: 0
+    finalRange: 0
   upgradeButtonUI: {fileID: 612976768}
   finalButtonUI: {fileID: 1444664682}
   sellAmount: {fileID: 1326932150}
   upgradeCost: {fileID: 1288824543}
   finalCost: {fileID: 578913291}
   upgradeButton: {fileID: 612976770}
+  dmgText: {fileID: 1975228682}
+  speedText: {fileID: 525607364}
 --- !u!4 &591050166
 Transform:
   m_ObjectHideFlags: 0
@@ -10753,7 +10780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1112628755
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10773,7 +10800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 47.183, y: -22.7}
+  m_AnchoredPosition: {x: -17.3, y: 0.6534}
   m_SizeDelta: {x: 0.365, y: -21.513}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1112628756
@@ -19493,8 +19520,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.64, y: -4.11}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.059563, y: 4.2672}
+  m_SizeDelta: {x: 35.095, y: 9.586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975228682
 MonoBehaviour:
@@ -19579,7 +19606,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 80.79971, y: 10.132817, z: 83.98697, w: 25.015097}
+  m_margin: {x: 0.17517471, y: 0.28738213, z: -0.089984894, w: 0.0032591883}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
