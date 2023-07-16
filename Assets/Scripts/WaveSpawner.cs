@@ -98,7 +98,7 @@ public class WaveSpawner : MonoBehaviour
                 enemyToSpawn = enemyPrefabGreen;
                 colour = "Green";
             }
-            else if (randomTemp == 10)
+            else if (randomTemp == 10 && waveIndex > 2)
             {
                 enemyToSpawn = enemyPrefabBlue;
                 colour = "Blue";
