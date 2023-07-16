@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
         {
             animator.SetTrigger("Dead");
             WaveSpawner.enemies.Remove(this.gameObject);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject);
         }
         else if (colour == "Green")
         {
