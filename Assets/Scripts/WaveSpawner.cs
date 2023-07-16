@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 public class WaveSpawner : MonoBehaviour
@@ -16,6 +17,8 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnPoint;
 
     private int waveIndex = 0;
+
+    public TextMeshProUGUI waveCounter;
 
     public static List<GameObject> enemies = new List<GameObject>();
     private GameObject enemy;
@@ -40,6 +43,7 @@ public class WaveSpawner : MonoBehaviour
     {
         Debug.Log("Wave Incoming!");
         waveIndex++;
+        waveCounter.text = "Wave: " + waveIndex;
         PlayerStats.Rounds++;
 
         if (waveIndex % 10 == 0)
