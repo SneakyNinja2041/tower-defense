@@ -42,38 +42,70 @@ public class WaveSpawner : MonoBehaviour
         waveIndex++;
         PlayerStats.Rounds++;
 
-        for (int i = 0; i < Mathf.RoundToInt(waveIndex + (waveIndex / 3)); i++)
+        if (waveIndex % 10 == 0)
         {
-            SpawnEnemy();
-            //Debug.Log(enemies.Count);
-            yield return new WaitForSeconds(0.5f);
+            for (int i = 0; i < Mathf.RoundToInt(waveIndex + (waveIndex / 1.5f)); i++)
+            {
+                SpawnEnemy();
+                //Debug.Log(enemies.Count);
+                yield return new WaitForSeconds(0.5f);
+            }
         }
+        else
+        {
+            for (int i = 0; i < Mathf.RoundToInt(waveIndex + (waveIndex / 3)); i++)
+            {
+                SpawnEnemy();
+                //Debug.Log(enemies.Count);
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+        
         
     }
 
     void SpawnEnemy()
     {
-        // Randomly generates which slime colour to spawn
-        randomTemp = Random.Range(1, 11);
-        if (randomTemp <= 6)
+        if (waveIndex % 10 == 0) // If waveIndex is a multiple of 10
         {
-            enemyToSpawn = enemyPrefabRed;
-            colour = "Red";
-        }
-        else if (randomTemp <= 9)
-        {
-            enemyToSpawn = enemyPrefabGreen;
-            colour = "Green";
-        }
-        else if (randomTemp == 10)
-        {
-            enemyToSpawn = enemyPrefabBlue;
-            colour = "Blue";
+            randomTemp = Random.Range(1, 11);
+            if (randomTemp <= 5)
+            {
+                enemyToSpawn = enemyPrefabGreen;
+                colour = "Green";
+            }
+            else if (randomTemp <= 10)
+            {
+                enemyToSpawn = enemyPrefabBlue;
+                colour = "Blue";
+            }
         }
         else
         {
-            enemyToSpawn = enemyPrefabRed; // Prevent potential null error
+            // Randomly generates which slime colour to spawn
+            randomTemp = Random.Range(1, 11);
+            if (randomTemp <= 6)
+            {
+                enemyToSpawn = enemyPrefabRed;
+                colour = "Red";
+            }
+            else if (randomTemp <= 9)
+            {
+                enemyToSpawn = enemyPrefabGreen;
+                colour = "Green";
+            }
+            else if (randomTemp == 10)
+            {
+                enemyToSpawn = enemyPrefabBlue;
+                colour = "Blue";
+            }
+            else
+            {
+                enemyToSpawn = enemyPrefabRed; // Prevent potential null error
+            }
         }
+        
+        
         
         enemy = Instantiate(enemyToSpawn, spawnPoint.position, spawnPoint.rotation);
         enemies.Add(enemy);
