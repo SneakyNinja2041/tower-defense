@@ -4719,7 +4719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -166.10999, y: -71.48999}
+  m_AnchoredPosition: {x: -166.10995, y: -71.48999}
   m_SizeDelta: {x: -332.23, y: 142.98999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &518160425
@@ -4805,28 +4805,28 @@ MonoBehaviour:
     atkSpeed: 2
     range: 4
     upgradedPrefab: {fileID: 8296478823916959069, guid: a0a7c05db136acb44a037a09130c7114, type: 3}
-    upgradeCost: 10
+    upgradeCost: 75
     upgradedDamage: 7
     upgradedAtkSpeed: 4
     upgradedRange: 4
     finalPrefab: {fileID: 5149553479520085424, guid: edff84e6c456526419c7fa8d80783b57, type: 3}
-    finalCost: 10
+    finalCost: 180
     finalDamage: 10
     finalAtkSpeed: 5
     finalRange: 5
   archerTurret:
     prefab: {fileID: 2817703532161865650, guid: 2e825e2de42da0e428fe648c90c216e2, type: 3}
     cost: 20
-    damage: 2
+    damage: 5
     atkSpeed: 2
     range: 5
     upgradedPrefab: {fileID: 6991173252116550623, guid: 326056246013cfd4884eaedd5986ef1d, type: 3}
-    upgradeCost: 10
+    upgradeCost: 80
     upgradedDamage: 2
     upgradedAtkSpeed: 2
     upgradedRange: 6
     finalPrefab: {fileID: 5236046216917440333, guid: 6ef3e80ca2cd30a42bf9461a5af14f51, type: 3}
-    finalCost: 10
+    finalCost: 150
     finalDamage: 3
     finalAtkSpeed: 3
     finalRange: 7
@@ -4837,13 +4837,13 @@ MonoBehaviour:
     atkSpeed: 1
     range: 3
     upgradedPrefab: {fileID: 8740622221482188629, guid: dd1b6f431eb5aa049a28242182d82478, type: 3}
-    upgradeCost: 10
-    upgradedDamage: 15
+    upgradeCost: 150
+    upgradedDamage: 20
     upgradedAtkSpeed: 1
     upgradedRange: 3
     finalPrefab: {fileID: 2377859233924022913, guid: a5085eff2d99093428190813e54c7858, type: 3}
-    finalCost: 10
-    finalDamage: 20
+    finalCost: 280
+    finalDamage: 30
     finalAtkSpeed: 1
     finalRange: 4
 --- !u!4 &519368629 stripped
@@ -15225,7 +15225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8055877307858364033, guid: e5d3b60bde990d24e8fcb758267ced0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2177038
+      value: -2.2005
       objectReference: {fileID: 0}
     - target: {fileID: 8055877307858364033, guid: e5d3b60bde990d24e8fcb758267ced0f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15258,6 +15258,10 @@ PrefabInstance:
     - target: {fileID: 8055877307858364033, guid: e5d3b60bde990d24e8fcb758267ced0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055877307858364034, guid: e5d3b60bde990d24e8fcb758267ced0f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0688477
       objectReference: {fileID: 0}
     - target: {fileID: 8055877307858364035, guid: e5d3b60bde990d24e8fcb758267ced0f, type: 3}
       propertyPath: m_Name
@@ -19379,7 +19383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4457867760165001844, guid: ff621e0386ada1b48b5ff94394c71718, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.249869
+      value: -7.2614
       objectReference: {fileID: 0}
     - target: {fileID: 4457867760165001844, guid: ff621e0386ada1b48b5ff94394c71718, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19416,6 +19420,10 @@ PrefabInstance:
     - target: {fileID: 4457867760165001844, guid: ff621e0386ada1b48b5ff94394c71718, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457867760165001845, guid: ff621e0386ada1b48b5ff94394c71718, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0461884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff621e0386ada1b48b5ff94394c71718, type: 3}
