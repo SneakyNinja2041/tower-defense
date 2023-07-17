@@ -19,6 +19,7 @@ public class Turret : MonoBehaviour
 
     public GameObject bulletprefab;
     public Transform firePoint;
+    public GameObject rangeUI;
     
 
     // Start is called before the first frame update
@@ -72,6 +73,16 @@ public class Turret : MonoBehaviour
 
         fireCountdown -= Time.deltaTime;
 
+    }
+
+    private void OnMouseOver()
+    {
+        rangeUI.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        rangeUI.SetActive(false);
     }
 
 
